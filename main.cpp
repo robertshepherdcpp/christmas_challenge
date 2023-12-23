@@ -7,6 +7,7 @@
 int main()
 {
     int current_level = 0;
+    bool has_printed_first_level_instructions = false;
 
     collect_food f{};
 
@@ -14,9 +15,10 @@ int main()
     sf::RenderWindow window(sf::VideoMode(1000, 1000), "The Christmas Challenge");
     while (window.isOpen())
     {
-        if (current_level == 0)
+        if (current_level == 0 && !has_printed_first_level_instructions)
         {
             std::cout << "Try to collect all 5 mince pies, but make sure not to eat the carrots as they are for the reindeer!\n";
+            has_printed_first_level_instructions = true;
         }
         sf::Event event;
         while (window.pollEvent(event))
