@@ -1,5 +1,7 @@
 #include<SFML/Graphics.hpp>
 
+#include<iostream>
+
 #include"collect_food.h"
 
 int main()
@@ -8,9 +10,14 @@ int main()
 
     collect_food f{};
 
+
     sf::RenderWindow window(sf::VideoMode(1000, 1000), "The Christmas Challenge");
     while (window.isOpen())
     {
+        if (current_level == 0)
+        {
+            std::cout << "Try to collect all 5 mince pies, but make sure not to eat the carrots as they are for the reindeer!\n";
+        }
         sf::Event event;
         while (window.pollEvent(event))
         {
@@ -25,10 +32,17 @@ int main()
             }
         }
 
-        f.update();
-
         window.clear();
-        f.print(window);
+        if (current_level == 0)
+        {
+            f.update();
+            if (f.isDone())
+            {
+                std::cout << "First level complete!\n";
+                current_level += 1;
+            }
+            f.print(window);
+        }
         window.display();
     }
 
