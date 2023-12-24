@@ -130,9 +130,11 @@
   <ItemGroup>
     <ClCompile Include="collect_food.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="raindeer_road.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="collect_food.h" />
+    <ClInclude Include="raindeer_road.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

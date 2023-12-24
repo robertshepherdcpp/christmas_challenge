@@ -21,9 +21,15 @@
     <ClCompile Include="collect_food.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="raindeer_road.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="collect_food.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="raindeer_road.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
