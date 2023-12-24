@@ -41,6 +41,7 @@ int main()
             if (f.isDone())
             {
                 std::cout << "First level complete!\n";
+                std::cout << "You now have enough energy to go on your trip!\n";
                 current_level += 1;
             }
             f.print(window);
