@@ -69,7 +69,7 @@ auto raindeer_road::handleEvent(sf::Event& e) -> void
 
 auto raindeer_road::isDone() -> bool
 {
-	return santa_sprite.getPosition().y >= 300 || isDead;
+	return santa_sprite.getPosition().y >= 900 || isDead;
 }
 
 auto raindeer_road::print(sf::RenderWindow& w) -> void
@@ -118,5 +118,5 @@ auto raindeer_road::random_number(int x, int y) -> sf::Vector2f
 	std::uniform_int_distribution<std::mt19937::result_type> random_thing(0, x);
 	std::uniform_int_distribution<std::mt19937::result_type> random_thing_two(0, y);
 
-	return sf::Vector2f(random_thing(rng), random_thing_two(rng));
+	return sf::Vector2f(random_thing(rng), random_thing_two(rng) + 500);
 }
