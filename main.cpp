@@ -5,6 +5,8 @@
 #include"collect_food.h"
 #include"raindeer_road.h"
 
+// Merry Christmas!
+
 int main()
 {
     int current_level = 0;
